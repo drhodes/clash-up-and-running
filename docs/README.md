@@ -1,7 +1,3 @@
----
-layout: post
-title: Clash Up and Running (on linux)
-----
 
 # Start from scratch with a minimal debian in docker.
 
