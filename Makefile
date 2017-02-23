@@ -20,6 +20,11 @@ clean: ## clean all the things
 work: ## open all files in editor
 	emacs -nw *.v
 
+push:
+	git add -A :/
+	git commit -am "quick edit"
+	git push
+
 setup:
 	touch battle-plan.org
 	mkdir -p design

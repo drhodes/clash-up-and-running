@@ -76,17 +76,25 @@
 
    # lts-8.2 may be a little newer than the clash compiler.
    # why does that matter? hmm.
+   #+BEGIN_SRC bash
    stack install --resolver lts-8.2 clash-ghc
-
+   #+END_SRC
    # this needs to be run so emacs haskell interactive mode can find 
    # clash modules in the project stack repo.
    # interactive-haskell-mode reaches out to 
    # ghc here for type checking in the 
+
+   #+BEGIN_SRC bash
    stack install --resolver=lts-8.2 clash-prelude
+   #+END_SRC
+
 
    # this is how clash is run from the terminal using the version of
    # clash installed by stack. 
+
+   #+BEGIN_SRC bash
    stack exec --resolver=nightly -- clash --interactive
+   #+END_SRC
 
 ** What is applicative?
 ** 
