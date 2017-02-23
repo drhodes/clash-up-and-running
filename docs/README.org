@@ -1,6 +1,5 @@
 # start on a scratch instance.
-
-* Using Clash 
+* (THIS IS WORK IN PROGRESS)
 
 ** Installing clash from scratch
   get a minimal docker instance with debian.

@@ -2,30 +2,30 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgaf220ff">1. (THIS IS WORK IN PROGRESS)</a>
+<li><a href="#org4d56be3">1. Using Clash</a>
 <ul>
-<li><a href="#org5ac66d0">1.1. Installing clash from scratch</a></li>
-<li><a href="#orgdca10a7">1.2. Getting the emacs environment up and running</a>
+<li><a href="#org1d5c822">1.1. Installing clash from scratch</a></li>
+<li><a href="#orgc1ca3b8">1.2. Getting the emacs environment up and running</a>
 <ul>
-<li><a href="#orgf6c07c1">1.2.1. Splitting up .emacs</a></li>
-<li><a href="#org15c314b">1.2.2. Loading the haskell sub-config</a></li>
+<li><a href="#org2ac660d">1.2.1. Splitting up .emacs</a></li>
+<li><a href="#org633a9f1">1.2.2. Loading the haskell sub-config</a></li>
 </ul>
 </li>
-<li><a href="#org90e6183">1.3. Installing clash with stack</a></li>
-<li><a href="#orge582c27">1.4. What is applicative?</a></li>
-<li><a href="#orge118960">1.5. </a></li>
+<li><a href="#orgbc693f3">1.3. Installing clash with stack</a></li>
+<li><a href="#orgb1ba775">1.4. What is applicative?</a></li>
+<li><a href="#orgbb9ceec">1.5. </a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<a id="orgaf220ff"></a>
+<a id="org4d56be3"></a>
 
-# (THIS IS WORK IN PROGRESS)
+# Using Clash
 
 
-<a id="org5ac66d0"></a>
+<a id="org1d5c822"></a>
 
 ## Installing clash from scratch
 
@@ -33,7 +33,7 @@ get a minimal docker instance with debian.
 install stack
 
 
-<a id="orgdca10a7"></a>
+<a id="orgc1ca3b8"></a>
 
 ## Getting the emacs environment up and running
 
@@ -42,7 +42,7 @@ link over to the haskell-mode tutorial
 include .sub-haskell.el 
 
 
-<a id="orgf6c07c1"></a>
+<a id="org2ac660d"></a>
 
 ### Splitting up .emacs
 
@@ -89,7 +89,7 @@ include .sub-haskell.el
          '(haskell-process-log t))
 
 
-<a id="org15c314b"></a>
+<a id="org633a9f1"></a>
 
 ### Loading the haskell sub-config
 
@@ -101,7 +101,7 @@ include .sub-haskell.el
         (load-dir-one "~/.emacs.d/sub-macs/") ;; sub-haskell.el is in here
 
 
-<a id="org90e6183"></a>
+<a id="orgbc693f3"></a>
 
 ## Installing clash with stack
 
@@ -112,12 +112,12 @@ include .sub-haskell.el
     stack exec --resolver=nightly -- clash --interactive
 
 
-<a id="orge582c27"></a>
+<a id="orgb1ba775"></a>
 
 ## What is applicative?
 
 
-<a id="orge118960"></a>
+<a id="orgbb9ceec"></a>
 
 ## 
 
