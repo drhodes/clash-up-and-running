@@ -1,20 +1,53 @@
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgf9cc11e">1. Using Clash</a>
+<ul>
+<li><a href="#orgaa36a9f">1.1. Installing clash from scratch</a></li>
+<li><a href="#org5d73296">1.2. Getting the emacs environment up and running</a>
+<ul>
+<li><a href="#org7bc2675">1.2.1. Splitting up .emacs</a></li>
+<li><a href="#orgbfa9d5a">1.2.2. Loading the haskell sub-config</a></li>
+</ul>
+</li>
+<li><a href="#org9b6d10f">1.3. Installing clash with stack</a></li>
+<li><a href="#org8e5e299">1.4. What is applicative?</a></li>
+<li><a href="#org6b05287">1.5. </a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
 
-# Start from scratch with a minimal debian in docker.
+<a id="orgf9cc11e"></a>
 
-* Using Clash 
+# Using Clash
 
-** Installing clash from scratch
-  get a minimal docker instance with debian.
-  install stack
 
-** Getting the emacs environment up and running
-   link over to the haskell-mode tutorial
-   https://wiki.haskell.org/Emacs/Inferior_Haskell_processes
-   include .sub-haskell.el 
+<a id="orgaa36a9f"></a>
 
-*** Splitting up .emacs
-- Personally, I've split my .emacs into lots of different
-  sub-initialization files, this my haskell config.el
+## Installing clash from scratch
+
+get a minimal docker instance with debian.
+install stack
+
+
+<a id="org5d73296"></a>
+
+## Getting the emacs environment up and running
+
+link over to the haskell-mode tutorial
+<https://wiki.haskell.org/Emacs/Inferior_Haskell_processes>
+include .sub-haskell.el 
+
+
+<a id="org7bc2675"></a>
+
+### Splitting up .emacs
+
+-   Personally, I've split my .emacs into lots of different
+    sub-initialization files, this my haskell config.el
 
 (eval-after-load 'haskell-mode
   '(define-key haskell-mode-map [f10] 'haskell-navigate-imports))
@@ -55,35 +88,36 @@
  '(haskell-process-auto-import-loaded-modules t)
  '(haskell-process-log t))
 
-*** Loading the haskell sub-config
-- At the bottom of my main ~/.emacs file, there is a small loader that
-  loads all sub configs for different languages. 
+
+<a id="orgbfa9d5a"></a>
+
+### Loading the haskell sub-config
+
+-   At the bottom of my main ~/.emacs file, there is a small loader that
+    loads all sub configs for different languages. 
     
-  ;; https://elpa.gnu.org/packages/load-dir.html
-  (require 'load-dir)
-  (load-dir-one "~/.emacs.d/sub-macs/") ;; sub-haskell.el is in here
-  
+    ;; <https://elpa.gnu.org/packages/load-dir.html>
+    (require 'load-dir)
+    (load-dir-one "~/.emacs.d/sub-macs/") ;; sub-haskell.el is in here
 
 
+<a id="org9b6d10f"></a>
 
-** Installing clash with stack
-   # getting installing the new clash (based on ghc8, has feature ApplicativeDo)
-   # what is applicative anyways?   
+## Installing clash with stack
 
-   # lts-8.2 may be a little newer than the clash compiler.
-   # why does that matter? hmm.
-   stack install --resolver lts-8.2 clash-ghc
+stack install &#x2013;resolver lts-8.2 clash-ghc
 
-   # this needs to be run so emacs haskell interactive mode can find 
-   # clash modules in the project stack repo.
-   # interactive-haskell-mode reaches out to 
-   # ghc here for type checking in the 
-   stack install --resolver=lts-8.2 clash-prelude
+stack install &#x2013;resolver=lts-8.2 clash-prelude
 
-   # this is how clash is run from the terminal using the version of
-   # clash installed by stack. 
-   stack exec --resolver=nightly -- clash --interactive
+stack exec &#x2013;resolver=nightly &#x2013; clash &#x2013;interactive
 
-** What is applicative?
-** 
+
+<a id="org8e5e299"></a>
+
+## What is applicative?
+
+
+<a id="org6b05287"></a>
+
+## 
 
