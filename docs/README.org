@@ -1,5 +1,5 @@
 this is the real page:
-https://drhodes.github.io/clash-up-and-running/
+[blog page](https://drhodes.github.io/clash-up-and-running/)
 
 # start on a scratch instance.
 * (THIS IS WORK IN PROGRESS)

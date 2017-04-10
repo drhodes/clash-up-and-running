@@ -2,33 +2,33 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org8a49421">1. (THIS IS WORK IN PROGRESS)</a>
+<li><a href="#org434c5df">1. (THIS IS WORK IN PROGRESS)</a>
 <ul>
-<li><a href="#orga170fef">1.1. Installing clash from scratch</a></li>
-<li><a href="#org5afd958">1.2. Getting the emacs environment up and running</a>
+<li><a href="#orgb0b64ed">1.1. Installing clash from scratch</a></li>
+<li><a href="#org1982bfe">1.2. Getting the emacs environment up and running</a>
 <ul>
-<li><a href="#orgebb6ccd">1.2.1. Splitting up .emacs</a></li>
-<li><a href="#org3965d89">1.2.2. Loading the haskell sub-config</a></li>
+<li><a href="#orgdcce524">1.2.1. Splitting up .emacs</a></li>
+<li><a href="#org4c849f8">1.2.2. Loading the haskell sub-config</a></li>
 </ul>
 </li>
-<li><a href="#orge59749b">1.3. Installing clash with stack</a></li>
-<li><a href="#org5ca8bb5">1.4. What is applicative?</a></li>
-<li><a href="#org06198c0">1.5. </a></li>
+<li><a href="#orgee8599e">1.3. Installing clash with stack</a></li>
+<li><a href="#org8b39272">1.4. What is applicative?</a></li>
+<li><a href="#orgdbce723">1.5. </a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 this is the real page:
-<https://drhodes.github.io/clash-up-and-running/>
+[blog page](<https://drhodes.github.io/clash-up-and-running/>)
 
 
-<a id="org8a49421"></a>
+<a id="org434c5df"></a>
 
 # (THIS IS WORK IN PROGRESS)
 
 
-<a id="orga170fef"></a>
+<a id="orgb0b64ed"></a>
 
 ## Installing clash from scratch
 
@@ -39,7 +39,7 @@ get a minimal virtualized debian
 install stack
 
 
-<a id="org5afd958"></a>
+<a id="org1982bfe"></a>
 
 ## Getting the emacs environment up and running
 
@@ -48,7 +48,7 @@ link over to the haskell-mode tutorial
 include .sub-haskell.el 
 
 
-<a id="orgebb6ccd"></a>
+<a id="orgdcce524"></a>
 
 ### Splitting up .emacs
 
@@ -94,7 +94,7 @@ include .sub-haskell.el
          '(haskell-process-log t))
 
 
-<a id="org3965d89"></a>
+<a id="org4c849f8"></a>
 
 ### Loading the haskell sub-config
 
@@ -107,7 +107,7 @@ include .sub-haskell.el
         (load-dir-one "~/.emacs.d/sub-macs/") ;; sub-haskell.el is in here
 
 
-<a id="orge59749b"></a>
+<a id="orgee8599e"></a>
 
 ## Installing clash with stack
 
@@ -122,12 +122,12 @@ ref <http://simonmar.github.io/bib/papers/applicativedo.pdf>
     stack exec --resolver=nightly -- clash --interactive
 
 
-<a id="org5ca8bb5"></a>
+<a id="org8b39272"></a>
 
 ## What is applicative?
 
 
-<a id="org06198c0"></a>
+<a id="orgdbce723"></a>
 
 ## 
 
