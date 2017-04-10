@@ -1,8 +1,16 @@
+this is the real page:
+https://drhodes.github.io/clash-up-and-running/
+
 # start on a scratch instance.
 * (THIS IS WORK IN PROGRESS)
 
 ** Installing clash from scratch
-  get a minimal docker instance with debian.
+  get a minimal virtualized debian
+
+  #+BEGIN_SRC emacs-lisp
+  $ vagrant box add https://atlas.hashicorp.com/ARTACK/boxes/debian-jessie
+  #+END_SRC
+
   install stack
 
 ** Getting the emacs environment up and running
@@ -45,7 +53,6 @@
   (custom-set-variables '(haskell-process-type 'stack-ghci)))
 
 (require 'haskell-mode)
-
 (require 'haskell-interactive-mode)
 (require 'haskell-process)
 (add-hook 'haskell-mode-hook 'interactive-haskell-mode)
@@ -63,28 +70,35 @@
   #+BEGIN_SRC emacs-lisp    
   ;; https://elpa.gnu.org/packages/load-dir.html
   (require 'load-dir)
+  ;; a custom directory containing all sub-configs.
   (load-dir-one "~/.emacs.d/sub-macs/") ;; sub-haskell.el is in here
   #+END_SRC
   
 
-
-
 ** Installing clash with stack
    # getting installing the new clash (based on ghc8, has feature ApplicativeDo)
    # what is applicative anyways?   
+   
+   ref http://dev.stephendiehl.com/hask/#applicative-do
+   ref http://learnyouahaskell.com/functors-applicative-functors-and-monoids#applicative-functors
+   ref http://simonmar.github.io/bib/papers/applicativedo.pdf
 
-   # lts-8.2 may be a little newer than the clash compiler.
+
+
+   # lts-8.5 may be a little newer than the clash compiler.
    # why does that matter? hmm.
+
    #+BEGIN_SRC bash
-   stack install --resolver lts-8.2 clash-ghc
+   stack install --resolver lts-8.5 clash-ghc
    #+END_SRC
+
    # this needs to be run so emacs haskell interactive mode can find 
    # clash modules in the project stack repo.
    # interactive-haskell-mode reaches out to 
    # ghc here for type checking in the 
 
    #+BEGIN_SRC bash
-   stack install --resolver=lts-8.2 clash-prelude
+   stack install --resolver=lts-8.5 clash-prelude
    #+END_SRC
 
 

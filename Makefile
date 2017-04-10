@@ -6,10 +6,10 @@ help:
 
 
 build: ## build
-	stack exec --resolver=lts-8.2 -- clash FIR.hs
+	stack exec --resolver=lts-8.5 -- clash FIR.hs
 
 shell: ## build
-	stack exec --resolver=lts-8.2 -- clash --interactive
+	stack exec --resolver=lts-8.5 -- clash --interactive
 
 test: ## test
 	echo test

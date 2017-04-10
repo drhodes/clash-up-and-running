@@ -2,38 +2,44 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgaf220ff">1. (THIS IS WORK IN PROGRESS)</a>
+<li><a href="#org8a49421">1. (THIS IS WORK IN PROGRESS)</a>
 <ul>
-<li><a href="#org5ac66d0">1.1. Installing clash from scratch</a></li>
-<li><a href="#orgdca10a7">1.2. Getting the emacs environment up and running</a>
+<li><a href="#orga170fef">1.1. Installing clash from scratch</a></li>
+<li><a href="#org5afd958">1.2. Getting the emacs environment up and running</a>
 <ul>
-<li><a href="#orgf6c07c1">1.2.1. Splitting up .emacs</a></li>
-<li><a href="#org15c314b">1.2.2. Loading the haskell sub-config</a></li>
+<li><a href="#orgebb6ccd">1.2.1. Splitting up .emacs</a></li>
+<li><a href="#org3965d89">1.2.2. Loading the haskell sub-config</a></li>
 </ul>
 </li>
-<li><a href="#org90e6183">1.3. Installing clash with stack</a></li>
-<li><a href="#orge582c27">1.4. What is applicative?</a></li>
-<li><a href="#orge118960">1.5. </a></li>
+<li><a href="#orge59749b">1.3. Installing clash with stack</a></li>
+<li><a href="#org5ca8bb5">1.4. What is applicative?</a></li>
+<li><a href="#org06198c0">1.5. </a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
+this is the real page:
+<https://drhodes.github.io/clash-up-and-running/>
 
-<a id="orgaf220ff"></a>
+
+<a id="org8a49421"></a>
 
 # (THIS IS WORK IN PROGRESS)
 
 
-<a id="org5ac66d0"></a>
+<a id="orga170fef"></a>
 
 ## Installing clash from scratch
 
-get a minimal docker instance with debian.
+get a minimal virtualized debian
+
+    $ vagrant box add https://atlas.hashicorp.com/ARTACK/boxes/debian-jessie
+
 install stack
 
 
-<a id="orgdca10a7"></a>
+<a id="org5afd958"></a>
 
 ## Getting the emacs environment up and running
 
@@ -42,7 +48,7 @@ link over to the haskell-mode tutorial
 include .sub-haskell.el 
 
 
-<a id="orgf6c07c1"></a>
+<a id="orgebb6ccd"></a>
 
 ### Splitting up .emacs
 
@@ -78,7 +84,6 @@ include .sub-haskell.el
           (custom-set-variables '(haskell-process-type 'stack-ghci)))
         
         (require 'haskell-mode)
-        
         (require 'haskell-interactive-mode)
         (require 'haskell-process)
         (add-hook 'haskell-mode-hook 'interactive-haskell-mode)
@@ -89,7 +94,7 @@ include .sub-haskell.el
          '(haskell-process-log t))
 
 
-<a id="org15c314b"></a>
+<a id="org3965d89"></a>
 
 ### Loading the haskell sub-config
 
@@ -98,26 +103,31 @@ include .sub-haskell.el
     
         ;; https://elpa.gnu.org/packages/load-dir.html
         (require 'load-dir)
+        ;; a custom directory containing all sub-configs.
         (load-dir-one "~/.emacs.d/sub-macs/") ;; sub-haskell.el is in here
 
 
-<a id="org90e6183"></a>
+<a id="orge59749b"></a>
 
 ## Installing clash with stack
 
-    stack install --resolver lts-8.2 clash-ghc
+ref <http://dev.stephendiehl.com/hask/#applicative-do>
+ref <http://learnyouahaskell.com/functors-applicative-functors-and-monoids#applicative-functors>
+ref <http://simonmar.github.io/bib/papers/applicativedo.pdf>
 
-    stack install --resolver=lts-8.2 clash-prelude
+    stack install --resolver lts-8.5 clash-ghc
+
+    stack install --resolver=lts-8.5 clash-prelude
 
     stack exec --resolver=nightly -- clash --interactive
 
 
-<a id="orge582c27"></a>
+<a id="org5ca8bb5"></a>
 
 ## What is applicative?
 
 
-<a id="orge118960"></a>
+<a id="org06198c0"></a>
 
 ## 
 
